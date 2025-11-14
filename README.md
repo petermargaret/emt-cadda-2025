@@ -6,8 +6,8 @@ _Field: Bioinformatics_
 _Institution: University of Nairobi_
 ## How to use
 _Note: Ensure that bash script is located in the directory as given architecture below_
-_copy to editor and save the first script as: **singlerec.sh (this is for docking multiple ligands on single receptor)**_
-_copy to editor and save the second script as: **multierec.sh (this is for docking multiple ligands on multiple receptors)**_
+_copy to editor or download and save the first script as: **singlerec.sh (this is for docking multiple ligands on single receptor)**_
+_copy to editor or download and save the second script as: **multierec.sh (this is for docking multiple ligands on multiple receptors)**_
 _incase of any error, please feel free to contact me_
 
 
