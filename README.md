@@ -44,8 +44,8 @@ _incase of any error, please feel free to contact me_**Observe architercture to 
      └─────────┬─────────┘
                │
      ┌─────────▼─────────┐
-     │  RESULTS SUMMARY   │
-     └────────────────────┘
+     │  RESULTS SUMMARY  │
+     └───────────────────┘
 ```
 
 ---
