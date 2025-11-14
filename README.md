@@ -229,5 +229,3 @@ Receptor,Ligand,Affinity(kcal/mol)
 
 ---
 
-# LICENSE
-MIT License (or modify as needed)
