@@ -1,4 +1,4 @@
-## Automating Multi-Ligand Docking Using Bash and AutoDock Vina
+## Automating Multi-Ligand Docking Using Bash and AutoDock Vina(training purpose)
 _Author: Peter Margaret_  
 _Email: petermargaret25@gmail.com_  
 _Phone: +254104095206_  
@@ -9,6 +9,7 @@ _Note: Ensure that bash script is located in the directory as given architecture
 _copy to editor and save the first script as: **singlerec.sh (this is for docking multiple ligands on single receptor)**_
 _copy to editor and save the second script as: **multierec.sh (this is for docking multiple ligands on multiple receptors)**_
 _incase of any error, please feel free to contact me_
+
 
 
 **Prerequisites**
@@ -96,9 +97,9 @@ center_x = -14.1
 center_y = -43.8
 center_z = 27.7
 
-size_x = 22
-size_y = 22
-size_z = 22
+size_x = 20
+size_y = 20
+size_z = 20
 
 exhaustiveness = 16
 num_modes = 10
