@@ -3,9 +3,13 @@ _Author: Peter Margaret_
 _Email: petermargaret25@gmail.com_  
 _Phone: +254104095206_  
 _Field: Bioinformatics_  
-_Institution: University of Nairobi_  
+_Institution: University of Nairobi_
+## How to use
 _Note: Ensure that bash script is located in the directory as given architecture below_
+_copy to editor and save the first script as: **singlerec.sh (this is for docking multiple ligands on single receptor)**_
+_copy to editor and save the second script as: **multierec.sh (this is for docking multiple ligands on multiple receptors)**_
 _incase of any error, please feel free to contact me_
+
 
 **Prerequisites**
 
@@ -64,25 +68,23 @@ _incase of any error, please feel free to contact me_
 ---
 
 **Directory Architecture**
-
 ```
 emt-cadda-2025/
 │
-├── receptors/
-│      ├── receptor1.pdbqt
-│      ├── receptor2.pdbqt
+├── receptors/(folder where receptors are stored)
+│      ├── 4ey7.pdbqt
+│      ├── 4ey8.pdbqt
 │
-├── ligands/
+├── ligands/(folder where ligands are stored)
 │      ├── lig1.pdbqt
 │      ├── lig2.pdbqt
 │
-├── poses/
+├── poses/(folder where results will be written - this will automatically be created by the script)
 │
-├── config.txt
+├── config.txt(coordinates for active site)
 │
-└── scripts/
-       ├── dock_multi_ligand.sh
-       └── dock_multi_receptors_multi_ligands.sh
+├── singlrec.sh
+└── multirec.sh
 ```
 
 ---
@@ -90,17 +92,17 @@ emt-cadda-2025/
 **config.txt**
 
 ```
-center_x = 10
-center_y = 20
-center_z = 30
+center_x = -14.1
+center_y = -43.8
+center_z = 27.7
 
 size_x = 22
 size_y = 22
 size_z = 22
 
 exhaustiveness = 16
-num_modes = 9
-energy_range = 4
+num_modes = 10
+energy_range = 3
 ```
 
 ---
@@ -118,14 +120,14 @@ vina --receptor receptor.pdbqt --batch ligands/name_*.pdbqt --config config.txt 
 ```bash
 #!/usr/bin/env bash
 # Paths
-receptor="name.pdbqt"
+receptor="4ey7.pdbqt"
 ligand_dir="ligands"
 out_dir="poses"
 config="config.txt"
 
 mkdir -p "$out_dir"
 
-for ligand in "$ligand_dir"/name_*.pdbqt; do
+for ligand in "$ligand_dir"/*.pdbqt; do
     ligand_name=$(basename "$ligand" .pdbqt)
     echo "Docking ligand: $ligand_name"
 
