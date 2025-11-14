@@ -8,7 +8,7 @@ _Institution: University of Nairobi_
 _Note: Ensure that bash script is located in the directory as given architecture below_
 _copy to editor or download and save the first script as: **singlerec.sh (this is for docking multiple ligands on single receptor)**_
 _copy to editor or download and save the second script as: **multierec.sh (this is for docking multiple ligands on multiple receptors)**_
-_incase of any error, please feel free to contact me_
+_incase of any error, please feel free to contact me_**Observe architercture to avoid file not found errors!**
 
 
 
@@ -32,15 +32,15 @@ _incase of any error, please feel free to contact me_
 
 ```
         ┌──────────────┐
-        │   PROT-PREP   │
-        └──────┬────────┘
-               │
-        ┌──────▼──────┐
-        │  LIG-PREP    │
+        │protein-prep  │
         └──────┬───────┘
                │
+        ┌──────▼──────┐
+        │  ligand prep│
+        └──────┬──────┘
+               │
      ┌─────────▼─────────┐
-     │   BATCH DOCKING    │
+     │   Batch docking   │
      └─────────┬─────────┘
                │
      ┌─────────▼─────────┐
@@ -49,7 +49,7 @@ _incase of any error, please feel free to contact me_
 ```
 
 ---
-**Protein Preparation**
+**Protein Preparation** - use MGLtools or openbabel or python script
 
 - Download PDB from RCSB
 - Check chains present
@@ -60,8 +60,7 @@ _incase of any error, please feel free to contact me_
 
 ---
 
-**Ligand Preparation**
-
+**Ligand Preparation**- use MGLtools or openbabel or python script
 - Add charges
 - Check rotatable bonds
 - Save as `.pdbqt`
